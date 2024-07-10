@@ -1,0 +1,105 @@
+:root{
+    --main-text: #000;
+    --secondary-text: #4D4D4D;
+
+    --font: 'Archivo', sans-serif;
+
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+
+    --xsmall: 12px;
+    --small: 18px;
+    --med: 27px;
+    --big: 36px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* LOADING SCREEN */
+
+
+.loading-screen{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.loading-screen div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-text{
+    margin-top: 20px;
+    font-size: var(--big);
+    font-weight: var(--semibold);
+    z-index: 2;
+}
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.loading{
+    animation: spin 5s infinite linear forwards;
+}
+
+.white-bg{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+@keyframes animateWhite {
+    0%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(150vh);
+    }
+}
+
+.animate-white{
+    animation: animateWhite 1s forwards;
+}
+
+/* CONTAINER */
+
+@keyframes fadeInContainer {
+    0%{
+        transform: scale(.8);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.fade-in-container{
+    animation: fadeInContainer .5s forwards;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
