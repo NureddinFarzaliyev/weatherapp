@@ -31,3 +31,21 @@ setInterval(() => {
     document.querySelector('.loading-screen').style.backgroundImage = 'none';
     document.querySelector('.container').classList.add('fade-in-container')
 }, 2000);
+
+
+// Opening-closing search component
+
+const toggleSearchDesktop = (button, element) => {
+    button.addEventListener('click', () => {
+        if (element.classList.contains('show-desktop-search')) {
+            element.classList.remove('show-desktop-search');
+            element.classList.add('hide-desktop-search')
+        }else{
+            element.classList.remove('hide-desktop-search')
+            element.classList.add('show-desktop-search')
+        }
+
+    })
+}
+
+toggleSearchDesktop(document.querySelector('.loc-desktop'), document.querySelector('.desktop-search'));

@@ -25,8 +25,17 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
     background-image: url(src/Morning.jpg); /* ** temp */
+}
+
+@media (min-width: 1001px) {
+    .container{
+        overflow: hidden;
+    }
+}
+
+.hidden{
+    display: none;
 }
 
 
@@ -105,7 +114,7 @@ body{
 .container{
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow: scroll;
     padding-top: 20px;
 }
 
@@ -153,6 +162,91 @@ body{
     display: none;
 }
 
+.desktop-search{
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    z-index: 3;
+    right: 35px;
+    top: 145px;
+}
+
+.desktop-search input{
+    background-color: #fff;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 0px 10px 0px 40px;
+    width: calc(100% - 30px);
+    margin: 15px;
+    font-family: var(--font);
+}
+
+.desktop-search button{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    background: none;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-result{
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.search-result:hover{
+    background-color: rgba(217, 217, 217, .8);
+}
+
+.search-result h2, .search-result p{
+    margin-left: 15px;
+}
+
+.search-result p{
+    font-size: var(--xsmall-font);
+    color: var(--secondary-text);
+}
+
+
+
+@keyframes showDesktopSearch {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hideDesktopSearch {
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+.show-desktop-search{
+    animation: showDesktopSearch .2s forwards;
+}
+
+.hide-desktop-search{
+    animation: hideDesktopSearch .1s forwards;
+}
 
 @media (min-width: 1001px) {
     .mobile-header{
@@ -189,6 +283,11 @@ body{
         justify-content: space-evenly;
         align-items: center;
         cursor: pointer;
+        transition: background .15s;
+    }
+
+    .location:hover{
+        background-color: rgba(217, 217, 217, .8);
     }
 
     .location-name{
@@ -275,7 +374,7 @@ body{
 
 }
 
-/* ? Wind and set */
+/* ! Wind and set */
 
 .wind{
     margin-top: 30px;
@@ -317,4 +416,55 @@ body{
 
 .set p {
     margin-left: 8px;
+}
+
+/* ! RIGHT PANEL */
+
+.section{
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    height: 490px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fday-card{
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fday-card .current-text{
+    font-size: var(--xsmall-font);
+}
+
+
+@media (min-width: 1001px) {
+    .wind > :nth-child(2){
+        margin-left: 0px;
+    }
+
+    .section{
+        flex-direction: row;
+    }
+
+    .right{
+        width: calc(100% - 210px);
+        margin-left: 30px;
+        margin-top: 0px;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .forecast-date{
+        position: absolute;
+        top: 20%;
+    }
 }
