@@ -1,6 +1,6 @@
 const currentTime = new Date;
 
-// function to get current time 
+// function to return current time of the day
 const getTime = (hour) => {
     if(hour < 5 || hour >= 21){
         return 'Night'
@@ -22,8 +22,10 @@ const assignBg = (time) => {
     document.querySelector('.loading-screen').style.backgroundImage = `url(/src/${time}.jpg)`;
 }
 
+// assigning text and bg according to time
 assignBg(getTime(currentTime.getHours()))
 
+// loading screen fade out after 2 secs
 setInterval(() => {
     document.querySelector('.loading-screen').classList.add('animate-white')
     document.querySelector('.loading-screen').style.backgroundImage = 'none';
