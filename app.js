@@ -1,5 +1,5 @@
 const currentTime = new Date;
-const API_KEY = '3d40cb2735d747fda42113037241007';
+const API_KEY = '';
 
 // function to return current time of the day
 const getTime = (hour) => {
