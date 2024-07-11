@@ -49,3 +49,4 @@ const toggleSearchDesktop = (button, element) => {
 }
 
 toggleSearchDesktop(document.querySelector('.loc-desktop'), document.querySelector('.desktop-search'));
+toggleSearchDesktop(document.querySelector('.loc-mobile'), document.querySelector('.desktop-search'))

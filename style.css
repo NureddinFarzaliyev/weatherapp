@@ -145,6 +145,11 @@ body{
     justify-content: space-between;
 }
 
+.loc-mobile{
+    background: none;
+    border: none;
+}
+
 .date > :nth-child(1){
     font-size: var(--big-font);
     font-weight: var(--semibold);
@@ -222,10 +227,13 @@ body{
     0%{
         opacity: 0;
         transform: translateY(-50px);
+        display: none;
     }
     100%{
         opacity: 1;
         transform: translateY(0px);
+        display: block;
+        z-index: 99;
     }
 }
 
@@ -233,10 +241,13 @@ body{
     0%{
         opacity: 1;
         transform: translateY(0px);
+        display: block;
     }
     100%{
         opacity: 0;
         transform: translateY(-30px);
+        display: none;
+        z-index: -99;
     }
 }
 
@@ -359,6 +370,7 @@ body{
     .left{
         width: 200px;
     }
+
 
     .current-weather{
         flex-direction: column;
