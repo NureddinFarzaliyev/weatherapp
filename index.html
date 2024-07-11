@@ -25,38 +25,21 @@
 
         <!-- ! HEADER -->
 
+        <!-- Search Panel -->
         <div class="desktop-search panel hide-desktop-search">
-            <input type="text" name="search" placeholder="Search...">
-            <button> <!-- Button to search -->
+            <input type="text" name="search" placeholder="Search..." class="search-input">
+            <button>
                 <img src="src/search.png" alt="search" height="20">
             </button>
-            <div class="search-result">
-                <img src="src/location-icon.png" alt="result">
-                <div>
-                    <h2>Baku</h2>
-                    <p>Azerbaijan</p>
-                </div>
-            </div>
-            <div class="search-result">
-                <img src="src/location-icon.png" alt="result">
-                <div>
-                    <h2>Baku</h2>
-                    <p>Azerbaijan</p>
-                </div>
-            </div>
-            <div class="search-result">
-                <img src="src/location-icon.png" alt="result">
-                <div>
-                    <h2>Baku</h2>
-                    <p>Azerbaijan</p>
-                </div>
+            <div class="search-results-container">
+                
             </div>
         </div>
 
         <div class="panel mobile-header">
             <div class="date">
-                <div>21:30</div>
-                <div>04 June 2024</div>
+                <div class="time-mobile">21:30</div>
+                <div class="date-mobile">01 01 2000</div>
             </div>
             <button class="location loc-mobile">
                 <img src="src/location-icon.png" alt="location">
@@ -66,25 +49,21 @@
 
         <div class="desktop-header">
             <div class="date panel">
-                <div>21:30</div>
-                <div>04 June 2024</div>
+                <div class="time">21:30</div>
+                <div class="date-m">01 01 2000</div>
             </div>
             <div class="location panel loc-desktop">
                 <img src="src/location-icon.png" alt="location">
                 <div>
-                    <div class="location-name">London</div>
+                    <div class="location-name loc-name-desktop">London</div>
                     <div class="country-name">United Kingdom</div>
                 </div>
             </div>
-            
         </div>
 
         <!-- ! SECTION -->
-
         <div class="section">
-
             <!-- ? LEFT PANEL -->
-
             <div class="left">
                 <div class="panel current">
                     <div class="current-weather">
@@ -114,82 +93,69 @@
                     <div class="sun">
                         <div>
                             <img src="src/sunrise.png" alt="sr">
-                            <p>04:56 AM</p>
+                            <p class="sunrise">04:56 AM</p>
                         </div>
                         <div>
                             <img src="src/sunset.png" alt="ss">
-                            <p>04:56 AM</p>
+                            <p class="sunset">04:56 AM</p>
                         </div>
                     </div>
                     <div class="moon">
                         <div>
                             <img src="src/moonrise.png" alt="mr">
-                            <p>04:56 AM</p>
+                            <p class="moonrise">04:56 AM</p>
                         </div>
                         <div>
                             <img src="src/moonset.png" alt="ms">
-                            <p>04:56 AM</p>
+                            <p class="moonset">04:56 AM</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="right panel">
-
                 <div class="current-weather fday-card">
-                    <img class="current-img" src="src/current-placeholder.png" alt="current">
-                    <div class="current-degree">18.3°C</div>
+                    <img class="current-img fday-img" src="src/current-placeholder.png" alt="current">
+                    <div class="current-degree fday-degree">18.3°C</div>
                     <div>
                         <p class="forecast-date">07/10</p>
-                        <div class="current-text">Light Rain</div>
+                        <div class="current-text fday-text">Light Rain</div>
                     </div>
                 </div>
-
                 <div class="current-weather fday-card">
-                    <img class="current-img" src="src/current-placeholder.png" alt="current">
-                    <div class="current-degree">18.3°C</div>
+                    <img class="current-img fday-img" src="src/current-placeholder.png" alt="current">
+                    <div class="current-degree fday-degree">18.3°C</div>
                     <div>
                         <p class="forecast-date">07/10</p>
-                        <div class="current-text">Light Rain</div>
+                        <div class="current-text fday-text">Light Rain</div>
                     </div>
                 </div>
-
                 <div class="current-weather fday-card">
-                    <img class="current-img" src="src/current-placeholder.png" alt="current">
-                    <div class="current-degree">18.3°C</div>
+                    <img class="current-img fday-img" src="src/current-placeholder.png" alt="current">
+                    <div class="current-degree fday-degree">18.3°C</div>
                     <div>
                         <p class="forecast-date">07/10</p>
-                        <div class="current-text">Light Rain</div>
+                        <div class="current-text fday-text">Light Rain</div>
                     </div>
                 </div>
-
                 <div class="current-weather fday-card">
-                    <img class="current-img" src="src/current-placeholder.png" alt="current">
-                    <div class="current-degree">18.3°C</div>
+                    <img class="current-img fday-img" src="src/current-placeholder.png" alt="current">
+                    <div class="current-degree fday-degree">18.3°C</div>
                     <div>
                         <p class="forecast-date">07/10</p>
-                        <div class="current-text">Light Rain</div>
+                        <div class="current-text fday-text">Light Rain</div>
                     </div>
                 </div>
-
                 <div class="current-weather fday-card">
-                    <img class="current-img" src="src/current-placeholder.png" alt="current">
-                    <div class="current-degree">18.3°C</div>
+                    <img class="current-img fday-img" src="src/current-placeholder.png" alt="current">
+                    <div class="current-degree fday-degree">18.3°C</div>
                     <div>
                         <p class="forecast-date">07/10</p>
-                        <div class="current-text">Light Rain</div>
+                        <div class="current-text fday-text">Light Rain</div>
                     </div>
                 </div>
-
-                
             </div>
-
-
         </div>
-
-
     </div>
     
 
